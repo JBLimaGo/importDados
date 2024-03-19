@@ -1,0 +1,116 @@
+unit DM_Modulo;
+
+interface
+
+uses
+  SysUtils, Classes, FIBDatabase, pFIBDatabase, FIBQuery, pFIBQuery,
+  pFIBStoredProc, DB, FIBDataSet, pFIBDataSet;
+
+type
+  TData_Modulo = class(TDataModule)
+    DB: TpFIBDatabase;
+    TR: TpFIBTransaction;
+    GRAVA_ITENS_NOTA: TpFIBStoredProc;
+    Produto: TpFIBDataSet;
+    ProdutoEMPRESA: TFIBIntegerField;
+    ProdutoCODIGO: TFIBIntegerField;
+    ProdutoAPLICACAO: TFIBStringField;
+    ProdutoDESCRICAO: TFIBStringField;
+    ProdutoCODIGO_ORIGINAL: TFIBStringField;
+    ProdutoUNIDADE: TFIBStringField;
+    ProdutoDATA_CADASTRO: TFIBDateTimeField;
+    ProdutoTIPO: TFIBStringField;
+    ProdutoLINHA: TFIBIntegerField;
+    ProdutoEQUIVALENTE: TFIBStringField;
+    ProdutoKIT: TFIBStringField;
+    ProdutoPRODUTO_SERVICO: TFIBStringField;
+    ProdutoLIVRO_PRECO: TFIBStringField;
+    ProdutoTIPO_PROMOCAO: TFIBIntegerField;
+    ProdutoCOD_BARRA: TFIBStringField;
+    ProdutoCODIGO_CATALAGO: TFIBStringField;
+    ProdutoGRUPO: TFIBIntegerField;
+    ProdutoOUTRO_CODIGO: TFIBStringField;
+    ProdutoFORNECEDOR: TFIBIntegerField;
+    ProdutoORIGEM: TFIBIntegerField;
+    ProdutoFOTO: TFIBStringField;
+    ProdutoSTATUS: TFIBIntegerField;
+    ProdutoPESO: TFIBFloatField;
+    ProdutoPESO_BRUTO: TFIBFloatField;
+    ProdutoMETRAGEM: TFIBFloatField;
+    ProdutoVENDA_S_CADASTRO: TFIBStringField;
+    ProdutoINTEIRO_FRACIONARIA: TFIBStringField;
+    ProdutoCODIGO_ANTERIOR: TFIBStringField;
+    ProdutoCLASS_FISCAL: TFIBStringField;
+    ProdutoNOME_LINHA: TFIBStringField;
+    ProdutoNOME_FORNECEDOR: TFIBStringField;
+    ProdutoNOME_UNIDADE: TFIBStringField;
+    ProdutoNOME_STATUS: TFIBStringField;
+    ProdutoNOME_EMPRESA: TFIBStringField;
+    ProdutoNOME_GRUPO: TFIBStringField;
+    ProdutoDias_Atraso: TIntegerField;
+    ProdutoARGUMENTO_VENDA: TFIBBlobField;
+    ProdutoFOTO2: TFIBStringField;
+    ProdutoFOTO3: TFIBStringField;
+    ProdutoCODIGO_FOTO: TFIBIntegerField;
+    ProdutoDESCRICAO_FOTO: TFIBStringField;
+    ProdutoNOME_FORNECEDOR_FANTASIA: TFIBStringField;
+    ProdutoDOLAR: TFIBStringField;
+    ProdutoDESCRICAO_SINTEGRA: TFIBStringField;
+    ProdutoMARCA: TFIBIntegerField;
+    ProdutoUSUARIO_CADASTRO: TFIBStringField;
+    ProdutoNOME_MARCA: TFIBStringField;
+    ProdutoTIPO_ITEM: TFIBStringField;
+    ProdutoCST_IPI: TFIBStringField;
+    ProdutoAPLICACAO_COMPLEMENTAR: TFIBStringField;
+    ProdutoSINCRONIZADO: TFIBStringField;
+    ProdutoCOD_ANP: TFIBStringField;
+    ProdutoCOMISSAO_MECANICO: TFIBStringField;
+    GRAVA_NOTA: TpFIBStoredProc;
+    PESQUISA_USUARIO: TpFIBDataSet;
+    PESQUISA_USUARIOCODIGO: TFIBIntegerField;
+    PESQUISA_USUARIONOME: TFIBStringField;
+    PESQUISA_USUARIOCOD_TURNO: TFIBIntegerField;
+    PESQUISA_USUARIOLOGIN: TFIBStringField;
+    Tipo_Mov: TpFIBDataSet;
+    Tipo_MovCODIGO: TFIBIntegerField;
+    Tipo_MovGRUPO_COMISSAO: TFIBIntegerField;
+    Tipo_MovORIGEM: TFIBIntegerField;
+    Tipo_MovFATOR_NF: TFIBIntegerField;
+    Tipo_MovDESTINO_VDA: TFIBIntegerField;
+    Tipo_MovDESCRICAO: TFIBStringField;
+    Tipo_MovGRUPO_MOV: TFIBIntegerField;
+    Tipo_MovTIPO_DOC: TFIBStringField;
+    Tipo_MovCFOP: TFIBStringField;
+    Tipo_MovENTRADA_SAIDA: TFIBIntegerField;
+    Tipo_MovVENDA_SERVICO: TFIBIntegerField;
+    Tipo_MovVISTA_PRAZO: TFIBIntegerField;
+    Tipo_MovINATIVO: TFIBIntegerField;
+    Tipo_MovSITUACAO: TFIBIntegerField;
+    Tipo_MovCOEFICIENTE_REDUCAO: TFIBFloatField;
+    Tipo_MovCFOP_SAIDA: TFIBStringField;
+    Tipo_MovCFOP_ENTRADA: TFIBStringField;
+    Tipo_MovMENSAGEM_RODAPE: TFIBStringField;
+    Tipo_MovMODELO: TFIBStringField;
+    Tipo_MovOBS: TFIBStringField;
+    Tipo_MovNOME_DOC: TFIBStringField;
+    Tipo_MovNOME_CFO: TFIBStringField;
+    Tipo_MovNOME_MODELO: TFIBStringField;
+    Tipo_MovOBS1: TFIBStringField;
+    Tipo_MovOBS2: TFIBStringField;
+    Tipo_MovOBS3: TFIBStringField;
+    Tipo_MovTIPO_EMISSAO: TFIBIntegerField;
+    Cliente: TpFIBDataSet;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Data_Modulo: TData_Modulo;
+
+implementation
+
+{$R *.dfm}
+
+end.

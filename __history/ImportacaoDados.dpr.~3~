@@ -1,0 +1,13 @@
+program ImportacaoDados;
+uses
+  Forms,
+  F_importa_produto_Ecommerce in 'F_importa_produto_Ecommerce.pas' {F_importa_ecommerce};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TF_importa_dados, F_importa_dados);
+  Application.Run;
+end.

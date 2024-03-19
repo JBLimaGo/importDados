@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2017/08/09 16:26:26.654.pas,C:\Users\jefferson\Documents\RAD Studio\Projects\Unit1.pas=G:\desenvolvimento\Jefferson\Pasta Projeto Delphi\Importação de Dados\U_Importa_Dados.pas</Transaction>
+    <Transaction>2017/08/09 16:26:26.654.dfm,C:\Users\jefferson\Documents\RAD Studio\Projects\Unit1.dfm=G:\desenvolvimento\Jefferson\Pasta Projeto Delphi\Importação de Dados\U_Importa_Dados.dfm</Transaction>
+    <Transaction>2017/08/09 16:26:55.239.dproj,C:\Users\jefferson\Documents\RAD Studio\Projects\Project1.dproj=G:\desenvolvimento\Jefferson\Pasta Projeto Delphi\Importação de Dados\P_Importa_Dados.dproj</Transaction>
+    <Transaction>2017/08/09 16:28:42.071.pas,G:\desenvolvimento\Jefferson\Pasta Projeto Delphi\Importação de Dados\Unit1.pas=G:\desenvolvimento\Jefferson\Pasta Projeto Delphi\Importação de Dados\DM.pas</Transaction>
+    <Transaction>2017/08/09 16:28:42.071.dfm,G:\desenvolvimento\Jefferson\Pasta Projeto Delphi\Importação de Dados\Unit1.dfm=G:\desenvolvimento\Jefferson\Pasta Projeto Delphi\Importação de Dados\DM.dfm</Transaction>
+    <Transaction>2017/08/09 16:46:23.505.pas,G:\desenvolvimento\Jefferson\Pasta Projeto Delphi\Importação de Dados\DM.pas=G:\desenvolvimento\Jefferson\Pasta Projeto Delphi\Importação de Dados\DM_Modulo.pas</Transaction>
+    <Transaction>2017/08/09 16:46:23.505.dfm,G:\desenvolvimento\Jefferson\Pasta Projeto Delphi\Importação de Dados\DM.dfm=G:\desenvolvimento\Jefferson\Pasta Projeto Delphi\Importação de Dados\DM_Modulo.dfm</Transaction>
+    <Transaction>2020/02/01 16:44:34.235.pas,D:\desenvolvimento\jefferson\ProjetosDelphi\Importação de Dados\DM_Modulo.pas=</Transaction>
+  </Transactions>
+</BorlandProject>

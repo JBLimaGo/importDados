@@ -1,0 +1,19 @@
+object DataModule1: TDataModule1
+  OldCreateOrder = False
+  Height = 534
+  Width = 814
+  object pFIBDatabase1: TpFIBDatabase
+    SQLDialect = 1
+    Timeout = 0
+    GeneratorsCache.GeneratorList = <>
+    WaitForRestoreConnect = 0
+    Left = 740
+    Top = 20
+  end
+  object pFIBTransaction1: TpFIBTransaction
+    TimeoutAction = TARollback
+    MDTTransactionRole = mtrAutoDefine
+    Left = 744
+    Top = 94
+  end
+end
